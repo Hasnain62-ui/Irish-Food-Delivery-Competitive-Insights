@@ -1,0 +1,22 @@
+# Core Data Analysis and Manipulation
+pandas
+numpy
+
+# Visualization Libraries
+matplotlib
+seaborn
+plotly-express
+
+# Machine Learning and Statistical Modeling
+scikit-learn
+statsmodels
+
+# Natural Language Processing (NLP) and Text Analysis
+nltk
+textblob
+wordcloud
+
+# Web Scraping Libraries
+requests
+beautifulsoup4
+google-play-scraper
