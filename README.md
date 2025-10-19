@@ -43,3 +43,4 @@ To reproduce the analysis and environment, please follow these steps:
 
 ```bash
 git clone https://github.com/Hasnain62-ui/Irish-Food-Delivery-Competitive-Insights.git
+cd Irish-Food-Delivery-Competitive-Insights
