@@ -8,15 +8,23 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        --dark-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+        --dark-gradient: linear-gradient(
+          135deg,
+          #0f0c29 0%,
+          #302b63 50%,
+          #24243e 100%
+        );
         --glow-purple: rgba(102, 126, 234, 0.4);
         --glow-pink: rgba(245, 87, 108, 0.4);
         --glow-cyan: rgba(0, 242, 254, 0.4);
@@ -29,7 +37,7 @@
       }
 
       body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
         background: #0a0a0f;
         color: #ffffff;
         line-height: 1.6;
@@ -38,23 +46,42 @@
 
       /* Animated Background */
       body::before {
-        content: '';
+        content: "";
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 20%, rgba(245, 87, 108, 0.15) 0%, transparent 50%),
-                    radial-gradient(circle at 40% 80%, rgba(0, 242, 254, 0.15) 0%, transparent 50%);
+        background: radial-gradient(
+            circle at 20% 50%,
+            rgba(102, 126, 234, 0.15) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(245, 87, 108, 0.15) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 40% 80%,
+            rgba(0, 242, 254, 0.15) 0%,
+            transparent 50%
+          );
         animation: backgroundShift 15s ease infinite;
         pointer-events: none;
         z-index: 0;
       }
 
       @keyframes backgroundShift {
-        0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.8; transform: scale(1.1); }
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.8;
+          transform: scale(1.1);
+        }
       }
 
       /* Navbar */
@@ -69,19 +96,30 @@
       }
 
       .navbar::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 2px;
-        background: linear-gradient(90deg, transparent, #667eea, #764ba2, transparent);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          #667eea,
+          #764ba2,
+          transparent
+        );
         animation: lineGlow 3s ease-in-out infinite;
       }
 
       @keyframes lineGlow {
-        0%, 100% { opacity: 0.5; }
-        50% { opacity: 1; }
+        0%,
+        100% {
+          opacity: 0.5;
+        }
+        50% {
+          opacity: 1;
+        }
       }
 
       .navbar .container-fluid {
@@ -95,7 +133,7 @@
         display: flex;
         align-items: center;
         gap: 0.75rem;
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-weight: 700;
         font-size: 1.5rem;
         background: linear-gradient(135deg, #667eea, #764ba2, #f5576c);
@@ -114,8 +152,13 @@
       }
 
       @keyframes iconFloat {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
       }
 
       .navbar-nav .nav-link {
@@ -129,7 +172,7 @@
       }
 
       .navbar-nav .nav-link::before {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -163,35 +206,67 @@
       .hero-overlay {
         position: absolute;
         inset: 0;
-        background: radial-gradient(circle at 30% 40%, var(--glow-purple) 0%, transparent 70%),
-                    radial-gradient(circle at 70% 60%, var(--glow-pink) 0%, transparent 70%);
+        background: radial-gradient(
+            circle at 30% 40%,
+            var(--glow-purple) 0%,
+            transparent 70%
+          ),
+          radial-gradient(
+            circle at 70% 60%,
+            var(--glow-pink) 0%,
+            transparent 70%
+          );
         animation: heroGlow 8s ease-in-out infinite;
       }
 
       @keyframes heroGlow {
-        0%, 100% { opacity: 0.3; }
-        50% { opacity: 0.6; }
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 0.6;
+        }
       }
 
       /* Floating particles */
       header#introduction::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 100%;
         height: 100%;
-        background-image: 
-          radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.4), transparent),
-          radial-gradient(2px 2px at 60% 70%, rgba(255, 255, 255, 0.3), transparent),
-          radial-gradient(1px 1px at 50% 50%, rgba(255, 255, 255, 0.5), transparent),
-          radial-gradient(1px 1px at 80% 10%, rgba(255, 255, 255, 0.4), transparent);
+        background-image: radial-gradient(
+            2px 2px at 20% 30%,
+            rgba(255, 255, 255, 0.4),
+            transparent
+          ),
+          radial-gradient(
+            2px 2px at 60% 70%,
+            rgba(255, 255, 255, 0.3),
+            transparent
+          ),
+          radial-gradient(
+            1px 1px at 50% 50%,
+            rgba(255, 255, 255, 0.5),
+            transparent
+          ),
+          radial-gradient(
+            1px 1px at 80% 10%,
+            rgba(255, 255, 255, 0.4),
+            transparent
+          );
         background-size: 200% 200%;
         animation: particleFloat 20s linear infinite;
         opacity: 0.3;
       }
 
       @keyframes particleFloat {
-        0% { background-position: 0% 0%; }
-        100% { background-position: 100% 100%; }
+        0% {
+          background-position: 0% 0%;
+        }
+        100% {
+          background-position: 100% 100%;
+        }
       }
 
       header#introduction .container {
@@ -220,11 +295,16 @@
       }
 
       .hero-content h1 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 4rem;
         font-weight: 800;
         line-height: 1.1;
-        background: linear-gradient(135deg, #ffffff 0%, #667eea 50%, #f5576c 100%);
+        background: linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #667eea 50%,
+          #f5576c 100%
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -235,8 +315,13 @@
       }
 
       @keyframes textGlow {
-        0%, 100% { filter: drop-shadow(0 0 20px var(--glow-purple)); }
-        50% { filter: drop-shadow(0 0 40px var(--glow-purple)); }
+        0%,
+        100% {
+          filter: drop-shadow(0 0 20px var(--glow-purple));
+        }
+        50% {
+          filter: drop-shadow(0 0 40px var(--glow-purple));
+        }
       }
 
       .hero-content p {
@@ -269,13 +354,18 @@
       }
 
       .content-section::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.05),
+          transparent
+        );
         transition: left 0.7s ease;
       }
 
@@ -291,7 +381,7 @@
 
       /* Section Headers */
       .content-section h2 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 2.5rem;
         font-weight: 700;
         background: linear-gradient(135deg, #ffffff, #667eea);
@@ -304,7 +394,7 @@
       }
 
       .content-section h2::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -10px;
         left: 0;
@@ -323,7 +413,7 @@
       }
 
       .content-section h3 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 1.5rem;
         font-weight: 600;
         color: #ffffff;
@@ -342,10 +432,14 @@
       }
 
       .image-wrapper::before {
-        content: '';
+        content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, var(--glow-purple), var(--glow-pink));
+        background: linear-gradient(
+          135deg,
+          var(--glow-purple),
+          var(--glow-pink)
+        );
         opacity: 0;
         transition: opacity 0.4s ease;
         z-index: 1;
@@ -377,7 +471,11 @@
 
       /* Insight Box */
       .insight-box {
-        background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+        background: linear-gradient(
+          135deg,
+          rgba(102, 126, 234, 0.15) 0%,
+          rgba(118, 75, 162, 0.15) 100%
+        );
         border-radius: 20px;
         padding: 2.5rem;
         border: 1px solid rgba(102, 126, 234, 0.3);
@@ -387,19 +485,27 @@
       }
 
       .insight-box::before {
-        content: '';
+        content: "";
         position: absolute;
         top: -50%;
         right: -50%;
         width: 200%;
         height: 200%;
-        background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+        background: radial-gradient(
+          circle,
+          rgba(102, 126, 234, 0.1) 0%,
+          transparent 70%
+        );
         animation: rotate 20s linear infinite;
       }
 
       @keyframes rotate {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
       }
 
       .insight-box > * {
@@ -442,8 +548,15 @@
       }
 
       @keyframes pulse {
-        0%, 100% { transform: scale(1); opacity: 1; }
-        50% { transform: scale(1.2); opacity: 0.8; }
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.8;
+        }
       }
 
       .findings-list li strong {
@@ -503,7 +616,11 @@
         line-height: 1.8;
         color: rgba(255, 255, 255, 0.9);
         font-weight: 500;
-        background: linear-gradient(135deg, rgba(74, 172, 254, 0.15), rgba(0, 242, 254, 0.15));
+        background: linear-gradient(
+          135deg,
+          rgba(74, 172, 254, 0.15),
+          rgba(0, 242, 254, 0.15)
+        );
         border-radius: 16px;
         padding: 2rem;
         border: 1px solid rgba(0, 242, 254, 0.3);
@@ -514,7 +631,7 @@
       }
 
       .analysis-text::before {
-        content: '📊';
+        content: "📊";
         position: absolute;
         right: 20px;
         bottom: 20px;
@@ -535,7 +652,11 @@
 
       /* Insights Section */
       .insights-section {
-        background: linear-gradient(135deg, rgba(15, 15, 30, 0.9) 0%, rgba(30, 30, 50, 0.9) 100%);
+        background: linear-gradient(
+          135deg,
+          rgba(15, 15, 30, 0.9) 0%,
+          rgba(30, 30, 50, 0.9) 100%
+        );
         backdrop-filter: blur(20px);
         border-radius: 24px;
         padding: 5rem 3.5rem;
@@ -547,13 +668,17 @@
       }
 
       .insights-section::before {
-        content: '';
+        content: "";
         position: absolute;
         top: -50%;
         left: -50%;
         width: 200%;
         height: 200%;
-        background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 50%);
+        background: radial-gradient(
+          circle,
+          rgba(102, 126, 234, 0.1) 0%,
+          transparent 50%
+        );
         animation: rotate 30s linear infinite;
       }
 
@@ -565,7 +690,7 @@
       }
 
       .insights-header h2 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 3rem;
         font-weight: 800;
         background: linear-gradient(135deg, #ffffff, #667eea, #f5576c);
@@ -584,7 +709,11 @@
       }
 
       .insight-card {
-        background: linear-gradient(135deg, rgba(20, 20, 35, 0.8) 0%, rgba(30, 30, 50, 0.8) 100%);
+        background: linear-gradient(
+          135deg,
+          rgba(20, 20, 35, 0.8) 0%,
+          rgba(30, 30, 50, 0.8) 100%
+        );
         backdrop-filter: blur(10px);
         border-radius: 20px;
         padding: 2.5rem;
@@ -597,7 +726,7 @@
       }
 
       .insight-card::before {
-        content: '';
+        content: "";
         position: absolute;
         inset: 0;
         background: var(--primary-gradient);
@@ -637,7 +766,7 @@
       }
 
       .insight-number::after {
-        content: '';
+        content: "";
         position: absolute;
         inset: -3px;
         border-radius: 18px;
@@ -648,7 +777,7 @@
       }
 
       .insight-card h3 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 1.5rem;
         font-weight: 700;
         color: #ffffff;
@@ -1073,6 +1202,122 @@
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Reflection on AI Usage -->
+      <section id="ai-reflection" class="content-section">
+        <h2>Reflection on AI Usage: The Role of ChatGPT</h2>
+        <p class="section-intro">
+          AI coding assistants, primarily ChatGPT, were utilized extensively
+          throughout the project's development cycle, particularly in the Python
+          scripting phase. This use was aimed at optimizing efficiency and
+          debugging, adhering strictly to ethical guidelines by ensuring all
+          generated code was understood and adapted to the specific context.
+        </p>
+        <div class="insight-box mb-4">
+          <h3>AI Contributions</h3>
+          <p
+            style="
+              color: rgba(255, 255, 255, 0.8);
+              line-height: 1.8;
+              margin-bottom: 0;
+            "
+          >
+            ChatGPT was invaluable for generating boilerplate code, such as the
+            initial structures for the
+            <strong>web scraping scripts</strong> (<code
+              style="
+                background: rgba(0, 0, 0, 0.3);
+                padding: 0.2rem 0.5rem;
+                border-radius: 4px;
+                color: #00f2fe;
+              "
+              >requests</code
+            >
+            and
+            <code
+              style="
+                background: rgba(0, 0, 0, 0.3);
+                padding: 0.2rem 0.5rem;
+                border-radius: 4px;
+                color: #00f2fe;
+              "
+              >BeautifulSoup</code
+            >), the complex <strong>TextBlob/NLTK helper functions</strong> for
+            sentiment analysis, and optimizing
+            <strong>Pandas operations</strong> for data cleaning.
+          </p>
+        </div>
+        <div class="analysis-text">
+          The key learning involved the importance of
+          <strong>precise prompting</strong>. Vague requests often led to
+          irrelevant or deprecated code. The human role remained critical for
+          intellectual tasks:
+          <strong
+            >defining the business question, selecting the appropriate data
+            sources</strong
+          >, <strong>interpreting the sentiment polarity scores</strong> in the
+          context of the Irish market, and ultimately formulating the final
+          <strong>entrepreneurial recommendations</strong>. AI was a powerful
+          assistant, but the strategic decision-making and critical analysis
+          were entirely human-driven.
+        </div>
+      </section>
+
+      <!-- Limitations and Future Research -->
+      <section id="limitations" class="content-section">
+        <h2>Limitations, Risks, and Future Research</h2>
+        <p class="section-intro">
+          To ensure credible insights, the following data limitations and
+          project risks must be acknowledged:
+        </p>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="insight-box" style="height: 100%">
+              <h3>Data Constraints</h3>
+              <ul class="findings-list">
+                <li>
+                  <strong>Data Bias & Sample Size:</strong> The analysis relies
+                  solely on <strong>public review data</strong>, which is
+                  subject to <strong>self-selection bias</strong> (users with
+                  extreme experiences review) and does not represent the average
+                  transaction.
+                </li>
+                <li>
+                  <strong>Missing Operational Data:</strong> Conclusions on
+                  "operational performance" are inferred from satisfaction, as
+                  private operational metrics (e.g., actual rider turnaround
+                  time, cancellations, and profitability) were unavailable.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="insight-box" style="height: 100%">
+              <h3>Project Risks</h3>
+              <ul class="findings-list">
+                <li>
+                  <strong>Temporal Risk:</strong> Sentiment and market share are
+                  fluid. The findings represent a snapshot of user perception
+                  from the period the reviews were scraped and may change
+                  rapidly.
+                </li>
+                <li>
+                  <strong>Ethical & Legal Compliance:</strong> Though the
+                  scraped data is public, collection must always adhere to
+                  platform Terms of Service and ethical considerations regarding
+                  data use and attribution.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="action-note mt-4">
+          <strong>Future Research</strong>
+          Future research should prioritize triangulation with secondary market
+          reports and focused consumer surveys to validate the review-based
+          sentiment findings.
         </div>
       </section>
     </main>
